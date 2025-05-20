@@ -3,7 +3,7 @@
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
-WORKDIR /app v # Create default working directory
+WORKDIR /app # Create default working directory
 EXPOSE 8080
 EXPOSE 8081
 
