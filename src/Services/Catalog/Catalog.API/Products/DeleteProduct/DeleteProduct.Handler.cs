@@ -11,7 +11,7 @@
             var product = await session.LoadAsync<Product>(command.Id, cancellationToken);
             if (product is null)
             {
-                throw new ProductNotFoundException($"Product with ID {command.Id} not found.");
+                throw new ProductNotFoundException(command.Id);
             }
             session.Delete(product);
             await session.SaveChangesAsync(cancellationToken);
